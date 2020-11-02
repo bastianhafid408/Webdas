@@ -1,0 +1,1392 @@
+1
+00:00:01,589 --> 00:00:04,560
+hey guys hey going in this video I'm
+
+2
+00:00:04,560 --> 00:00:06,269
+going to be showing you how to use CSS
+
+3
+00:00:06,269 --> 00:00:09,389
+grid in order to create a basic layout
+
+4
+00:00:09,389 --> 00:00:12,269
+just like this for your web projects so
+
+5
+00:00:12,269 --> 00:00:15,299
+this video is intended for people who
+
+6
+00:00:15,299 --> 00:00:17,880
+are just starting out using CSS grid and
+
+7
+00:00:17,880 --> 00:00:20,400
+basically I'm going to be covering most
+
+8
+00:00:20,400 --> 00:00:23,370
+of the main features so that you can get
+
+9
+00:00:23,370 --> 00:00:25,380
+started and of course start implementing
+
+10
+00:00:25,380 --> 00:00:28,350
+a CSS grid for your own web projects so
+
+11
+00:00:28,350 --> 00:00:31,350
+this right here is the basic layouts we
+
+12
+00:00:31,350 --> 00:00:33,480
+have a header we have some content
+
+13
+00:00:33,480 --> 00:00:35,609
+sections and we have of course the
+
+14
+00:00:35,609 --> 00:00:38,640
+footer so basically this layout is going
+
+15
+00:00:38,640 --> 00:00:41,609
+to support this right here so this sort
+
+16
+00:00:41,609 --> 00:00:44,909
+of two column content layout as well as
+
+17
+00:00:44,909 --> 00:00:47,550
+a three column content layout just like
+
+18
+00:00:47,550 --> 00:00:49,859
+this so there's a small change in the
+
+19
+00:00:49,859 --> 00:00:52,499
+CSS in order to transform this right
+
+20
+00:00:52,499 --> 00:00:55,079
+here into this right here so of course
+
+21
+00:00:55,079 --> 00:00:57,659
+you can choose which one suits your
+
+22
+00:00:57,659 --> 00:01:00,780
+scenario better so anyway let's go
+
+23
+00:01:00,780 --> 00:01:04,170
+inside this HTML file right here we're
+
+24
+00:01:04,170 --> 00:01:05,969
+gonna start from scratch to create that
+
+25
+00:01:05,969 --> 00:01:09,090
+layout so inside the text editor it
+
+26
+00:01:09,090 --> 00:01:11,939
+looks something like this it is a plain
+
+27
+00:01:11,939 --> 00:01:15,990
+HTML skeleton so first to get started we
+
+28
+00:01:15,990 --> 00:01:19,680
+need to of course specify HTML so let's
+
+29
+00:01:19,680 --> 00:01:22,469
+create a container so a div with a class
+
+30
+00:01:22,469 --> 00:01:25,590
+of container for the actual grid
+
+31
+00:01:25,590 --> 00:01:30,329
+container so then inside the CSS let's
+
+32
+00:01:30,329 --> 00:01:33,359
+just firstly target the body and set a
+
+33
+00:01:33,359 --> 00:01:35,520
+margin of zero to remove the default
+
+34
+00:01:35,520 --> 00:01:39,810
+margin this way I can say container so
+
+35
+00:01:39,810 --> 00:01:42,329
+tighter the class of container and say
+
+36
+00:01:42,329 --> 00:01:45,359
+width and make this 100 review port week
+
+37
+00:01:45,359 --> 00:01:48,060
+and for the height we can say 100 and
+
+38
+00:01:48,060 --> 00:01:50,039
+viewport height and of course the
+
+39
+00:01:50,039 --> 00:01:52,439
+combination of these three means that
+
+40
+00:01:52,439 --> 00:01:54,450
+the container is going to take up the
+
+41
+00:01:54,450 --> 00:01:57,090
+entire width and height of the web page
+
+42
+00:01:57,090 --> 00:02:00,869
+so now saving this and refreshing inside
+
+43
+00:02:00,869 --> 00:02:03,179
+the dev tools if I was to hover over the
+
+44
+00:02:03,179 --> 00:02:05,670
+container we can see it spans the entire
+
+45
+00:02:05,670 --> 00:02:08,060
+width and the height of the available
+
+46
+00:02:08,060 --> 00:02:11,129
+viewing area I'm also just going to go
+
+47
+00:02:11,129 --> 00:02:13,860
+back inside here and specify some font
+
+48
+00:02:13,860 --> 00:02:15,060
+styling
+
+49
+00:02:15,060 --> 00:02:18,450
+to make things easier for us to read so
+
+50
+00:02:18,450 --> 00:02:21,060
+font-family let's make this quick sand
+
+51
+00:02:21,060 --> 00:02:24,780
+with sand sir and for the font weight
+
+52
+00:02:24,780 --> 00:02:28,680
+let's make this bold and also a font
+
+53
+00:02:28,680 --> 00:02:31,830
+size of something like 20 pixels so now
+
+54
+00:02:31,830 --> 00:02:35,150
+that is all set so we can now move on to
+
+55
+00:02:35,150 --> 00:02:39,120
+actually using a CSS grid so for this we
+
+56
+00:02:39,120 --> 00:02:41,340
+need to firstly specify that our
+
+57
+00:02:41,340 --> 00:02:44,489
+container is gonna be a grid or a grid
+
+58
+00:02:44,489 --> 00:02:47,850
+container for this we can say display
+
+59
+00:02:47,850 --> 00:02:51,150
+and make this grid so now we are ready
+
+60
+00:02:51,150 --> 00:02:54,060
+to start adding some grid items or at
+
+61
+00:02:54,060 --> 00:02:57,570
+least specify our layer so now I just
+
+62
+00:02:57,570 --> 00:03:00,810
+want to go back to the previous layout
+
+63
+00:03:00,810 --> 00:03:03,420
+right here because I now of course our
+
+64
+00:03:03,420 --> 00:03:06,390
+grid right here is ready to actually be
+
+65
+00:03:06,390 --> 00:03:09,090
+used we need to specify the amount of
+
+66
+00:03:09,090 --> 00:03:13,560
+columns and the amount of rows and also
+
+67
+00:03:13,560 --> 00:03:17,010
+their sizes for our base layer that's
+
+68
+00:03:17,010 --> 00:03:19,079
+basically how grid works you've got this
+
+69
+00:03:19,079 --> 00:03:22,200
+base grid layer of rows and columns in
+
+70
+00:03:22,200 --> 00:03:24,690
+the background and then once your layout
+
+71
+00:03:24,690 --> 00:03:27,269
+is complete you can say that certain
+
+72
+00:03:27,269 --> 00:03:29,220
+elements are going to span multiple rows
+
+73
+00:03:29,220 --> 00:03:31,230
+or multiple columns or even a
+
+74
+00:03:31,230 --> 00:03:33,630
+combination of the two so with that
+
+75
+00:03:33,630 --> 00:03:35,400
+being said let's go back to this example
+
+76
+00:03:35,400 --> 00:03:38,700
+and analyze and take a look at our
+
+77
+00:03:38,700 --> 00:03:42,480
+columns and rows for this layer as we
+
+78
+00:03:42,480 --> 00:03:45,510
+can see here in terms of rows we've got
+
+79
+00:03:45,510 --> 00:03:48,600
+four rows in total we've got one row
+
+80
+00:03:48,600 --> 00:03:52,109
+we've got two rows three rows and then
+
+81
+00:03:52,109 --> 00:03:56,160
+four rows okay even though this content
+
+82
+00:03:56,160 --> 00:03:59,190
+right here is spanning multiple rows we
+
+83
+00:03:59,190 --> 00:04:01,590
+still consider this to have a total of 4
+
+84
+00:04:01,590 --> 00:04:06,030
+rows 1 2 3 and then 4 in terms of
+
+85
+00:04:06,030 --> 00:04:08,940
+columns this actually has three columns
+
+86
+00:04:08,940 --> 00:04:11,790
+even though two are visible we've got
+
+87
+00:04:11,790 --> 00:04:14,670
+one we've got two and we've got three
+
+88
+00:04:14,670 --> 00:04:17,820
+that's easier to explain on this example
+
+89
+00:04:17,820 --> 00:04:20,010
+right here with the three column layer
+
+90
+00:04:20,010 --> 00:04:23,430
+one two and three so with that being
+
+91
+00:04:23,430 --> 00:04:27,420
+said this is a four by three layer
+
+92
+00:04:27,420 --> 00:04:29,760
+which means we can specify this in the
+
+93
+00:04:29,760 --> 00:04:33,510
+CSS for our example or this right here
+
+94
+00:04:33,510 --> 00:04:36,510
+so in the CSS let's hop inside the
+
+95
+00:04:36,510 --> 00:04:39,710
+container and we're gonna say down here
+
+96
+00:04:39,710 --> 00:04:43,980
+grid template columns and this right
+
+97
+00:04:43,980 --> 00:04:45,870
+here lets us specify the amount of
+
+98
+00:04:45,870 --> 00:04:49,260
+columns and also their sizes so we're
+
+99
+00:04:49,260 --> 00:04:53,970
+going to say 1 FR 1 FR and then 1 FR so
+
+100
+00:04:53,970 --> 00:04:56,490
+here we're specifying three columns
+
+101
+00:04:56,490 --> 00:05:00,060
+since we have three values separated by
+
+102
+00:05:00,060 --> 00:05:03,210
+a space and the width of those columns
+
+103
+00:05:03,210 --> 00:05:07,020
+is one fraction of the total remaining
+
+104
+00:05:07,020 --> 00:05:10,020
+space so basically we've got three
+
+105
+00:05:10,020 --> 00:05:12,690
+evenly spaced columns which are going to
+
+106
+00:05:12,690 --> 00:05:15,420
+shrink in size as we shrink our browser
+
+107
+00:05:15,420 --> 00:05:18,000
+because it is a fraction of the
+
+108
+00:05:18,000 --> 00:05:21,090
+available space okay and that is all for
+
+109
+00:05:21,090 --> 00:05:24,440
+the columns if you wanted to simplify
+
+110
+00:05:24,440 --> 00:05:28,200
+this declaration you could instead save
+
+111
+00:05:28,200 --> 00:05:32,880
+repeats then 3 and then your value so 1
+
+112
+00:05:32,880 --> 00:05:36,090
+fr and basically doing this is the exact
+
+113
+00:05:36,090 --> 00:05:38,250
+same as saying what if I wanna fire and
+
+114
+00:05:38,250 --> 00:05:41,700
+then one afar so now we can specify the
+
+115
+00:05:41,700 --> 00:05:43,680
+amount of rows for this we're gonna say
+
+116
+00:05:43,680 --> 00:05:46,620
+grid template rows in a very similar way
+
+117
+00:05:46,620 --> 00:05:48,960
+and for this it's going to be a bit more
+
+118
+00:05:48,960 --> 00:05:51,330
+complicated but not too much
+
+119
+00:05:51,330 --> 00:05:53,700
+so let's go back in the example and we
+
+120
+00:05:53,700 --> 00:05:56,430
+can see right here of course got the 4
+
+121
+00:05:56,430 --> 00:05:59,940
+rows the header row is 50 pixels in
+
+122
+00:05:59,940 --> 00:06:05,040
+height ok these two right here are gonna
+
+123
+00:06:05,040 --> 00:06:07,590
+be the same height but they're gonna be
+
+124
+00:06:07,590 --> 00:06:10,230
+once again a fraction of the available
+
+125
+00:06:10,230 --> 00:06:13,290
+space and the bottom one here is 100
+
+126
+00:06:13,290 --> 00:06:16,380
+pixels fixed so essentially the top and
+
+127
+00:06:16,380 --> 00:06:18,600
+the and the actual bottom rows are going
+
+128
+00:06:18,600 --> 00:06:21,750
+to be fixed heights of 50 and 100 pixels
+
+129
+00:06:21,750 --> 00:06:24,660
+and these two are gonna be a fraction of
+
+130
+00:06:24,660 --> 00:06:27,390
+the left or remaining space which means
+
+131
+00:06:27,390 --> 00:06:30,060
+if I was to shrink this browser height
+
+132
+00:06:30,060 --> 00:06:33,360
+we can see that only the two middle rows
+
+133
+00:06:33,360 --> 00:06:36,000
+are changing their height the header and
+
+134
+00:06:36,000 --> 00:06:39,690
+footer remain fixed so for this let's go
+
+135
+00:06:39,690 --> 00:06:41,070
+back inside here
+
+136
+00:06:41,070 --> 00:06:43,020
+we're going to say 50 pixels for the
+
+137
+00:06:43,020 --> 00:06:47,280
+first row and then one fr or one fr and
+
+138
+00:06:47,280 --> 00:06:50,460
+then 100 pixels for the bottom row of
+
+139
+00:06:50,460 --> 00:06:54,120
+course these two are absolutes and these
+
+140
+00:06:54,120 --> 00:06:56,610
+two are fractional and they can shrink
+
+141
+00:06:56,610 --> 00:07:00,330
+if they need to when the browser resizes
+
+142
+00:07:00,330 --> 00:07:02,670
+so now we've specified the columns and
+
+143
+00:07:02,670 --> 00:07:05,100
+the rows I can save this and then
+
+144
+00:07:05,100 --> 00:07:08,670
+refresh the browser inside the dev tools
+
+145
+00:07:08,670 --> 00:07:10,830
+if I was to hover over the container we
+
+146
+00:07:10,830 --> 00:07:12,890
+can see that Chrome gives us a
+
+147
+00:07:12,890 --> 00:07:16,290
+representation of our layer of course we
+
+148
+00:07:16,290 --> 00:07:18,060
+can see we have all of our rows and
+
+149
+00:07:18,060 --> 00:07:22,350
+columns working perfectly fine so now we
+
+150
+00:07:22,350 --> 00:07:25,080
+can move on to specifying a gap between
+
+151
+00:07:25,080 --> 00:07:28,170
+each one of our areas here so for this
+
+152
+00:07:28,170 --> 00:07:30,630
+it is very straightforward we can simply
+
+153
+00:07:30,630 --> 00:07:33,810
+say gap and make these 10 pixels for
+
+154
+00:07:33,810 --> 00:07:36,930
+example saving this and refreshing gives
+
+155
+00:07:36,930 --> 00:07:39,600
+us this right here of course a 10 pixels
+
+156
+00:07:39,600 --> 00:07:43,320
+gap excluding the edges of the container
+
+157
+00:07:43,320 --> 00:07:46,440
+if you wanted to add a 10 pixels gap on
+
+158
+00:07:46,440 --> 00:07:49,380
+the edges this can be done using padding
+
+159
+00:07:49,380 --> 00:07:51,900
+and then box-sizing let's go back inside
+
+160
+00:07:51,900 --> 00:07:54,420
+here and do that so we can say paddle
+
+161
+00:07:54,420 --> 00:07:56,400
+make this 10 pixels the same as the
+
+162
+00:07:56,400 --> 00:07:59,370
+actual gap size and box sizing our
+
+163
+00:07:59,370 --> 00:08:02,130
+border box to contain the padding as
+
+164
+00:08:02,130 --> 00:08:04,440
+being part of the total width of the
+
+165
+00:08:04,440 --> 00:08:07,290
+container let's save this and now we
+
+166
+00:08:07,290 --> 00:08:10,080
+have this right here which is identical
+
+167
+00:08:10,080 --> 00:08:13,050
+to our container in both of these two
+
+168
+00:08:13,050 --> 00:08:15,150
+examples so now essentially we are
+
+169
+00:08:15,150 --> 00:08:19,520
+finished with the container I do want to
+
+170
+00:08:19,520 --> 00:08:23,160
+go back inside here and just add a new
+
+171
+00:08:23,160 --> 00:08:27,090
+rule set for container and then do so
+
+172
+00:08:27,090 --> 00:08:28,890
+I'm gonna say padding here and make
+
+173
+00:08:28,890 --> 00:08:32,190
+these 10 pixels and say border at 1
+
+174
+00:08:32,190 --> 00:08:34,710
+pixel solid and then a black so now
+
+175
+00:08:34,710 --> 00:08:38,610
+essentially every great item so header
+
+176
+00:08:38,610 --> 00:08:41,039
+and all the content and the footer each
+
+177
+00:08:41,039 --> 00:08:42,539
+one of those divs are gonna have a
+
+178
+00:08:42,539 --> 00:08:45,090
+border I'm sorry I can actually see how
+
+179
+00:08:45,090 --> 00:08:48,120
+they look and how many rows and columns
+
+180
+00:08:48,120 --> 00:08:51,210
+they span so now so now let's move on to
+
+181
+00:08:51,210 --> 00:08:53,700
+creating the header we can make a new
+
+182
+00:08:53,700 --> 00:08:54,460
+div with a
+
+183
+00:08:54,460 --> 00:08:56,890
+I'll slap it on and just say head up as
+
+184
+00:08:56,890 --> 00:09:00,520
+the content so now if I save this and
+
+185
+00:09:00,520 --> 00:09:03,310
+refresh we can see that the header is
+
+186
+00:09:03,310 --> 00:09:06,610
+taking up a single column and a single
+
+187
+00:09:06,610 --> 00:09:10,690
+row in terms of its size okay so to make
+
+188
+00:09:10,690 --> 00:09:13,510
+the head a spend the remaining rows so
+
+189
+00:09:13,510 --> 00:09:15,370
+row number sorry our column so column
+
+190
+00:09:15,370 --> 00:09:17,860
+number two and column number three this
+
+191
+00:09:17,860 --> 00:09:20,260
+can be done using the grid column start
+
+192
+00:09:20,260 --> 00:09:23,370
+and the grid column end properties so
+
+193
+00:09:23,370 --> 00:09:26,670
+let's go inside here and I'm gonna say
+
+194
+00:09:26,670 --> 00:09:31,209
+for the class file header reads poem
+
+195
+00:09:31,209 --> 00:09:34,570
+start and make this one and say grids
+
+196
+00:09:34,570 --> 00:09:36,970
+column end and make this four
+
+197
+00:09:36,970 --> 00:09:39,490
+so to explain what the one and the four
+
+198
+00:09:39,490 --> 00:09:42,370
+means basically here you're specifying
+
+199
+00:09:42,370 --> 00:09:47,230
+the grid line number so a grid line is
+
+200
+00:09:47,230 --> 00:09:50,290
+basically alliance between your rows and
+
+201
+00:09:50,290 --> 00:09:52,839
+your columns so I'm gonna be showing you
+
+202
+00:09:52,839 --> 00:09:55,330
+what that means right now so in the
+
+203
+00:09:55,330 --> 00:09:59,110
+browser as we can see here we've got a
+
+204
+00:09:59,110 --> 00:10:02,830
+total of four grid lines on the
+
+205
+00:10:02,830 --> 00:10:05,770
+horizontal sorry on the vertical axis we
+
+206
+00:10:05,770 --> 00:10:09,370
+have right here at the edge this is grid
+
+207
+00:10:09,370 --> 00:10:12,430
+line number one we then have grid line
+
+208
+00:10:12,430 --> 00:10:15,790
+number two right here and then grid line
+
+209
+00:10:15,790 --> 00:10:18,580
+number three just about here and then
+
+210
+00:10:18,580 --> 00:10:22,410
+line number four just about here okay
+
+211
+00:10:22,410 --> 00:10:25,510
+that's very important to understand when
+
+212
+00:10:25,510 --> 00:10:28,240
+it comes to making your items span
+
+213
+00:10:28,240 --> 00:10:30,370
+multiple rows or multiple columns the
+
+214
+00:10:30,370 --> 00:10:32,950
+same goes for the horizontal axis okay
+
+215
+00:10:32,950 --> 00:10:36,190
+we of course have grid line number one
+
+216
+00:10:36,190 --> 00:10:40,329
+just up here okay number two and then of
+
+217
+00:10:40,329 --> 00:10:43,209
+course number three number four and then
+
+218
+00:10:43,209 --> 00:10:46,120
+number five just down here so that is
+
+219
+00:10:46,120 --> 00:10:49,270
+what our main bar grid lines so when I
+
+220
+00:10:49,270 --> 00:10:52,060
+specify a grid column start at one and
+
+221
+00:10:52,060 --> 00:10:54,940
+end before I mean that the header is
+
+222
+00:10:54,940 --> 00:10:58,120
+gonna start at number one add fish
+
+223
+00:10:58,120 --> 00:11:00,880
+number four so now saving this and
+
+224
+00:11:00,880 --> 00:11:04,360
+refreshing gives us this right here for
+
+225
+00:11:04,360 --> 00:11:06,820
+further clarification if I make this
+
+226
+00:11:06,820 --> 00:11:08,070
+grid column end
+
+227
+00:11:08,070 --> 00:11:12,030
+se3 save this and refresh we can see now
+
+228
+00:11:12,030 --> 00:11:17,220
+it goes to 3 so 1 2 and then 3
+
+229
+00:11:17,220 --> 00:11:20,310
+ok so perfect so let's just set this
+
+230
+00:11:20,310 --> 00:11:24,660
+back to be 4 yeah so now we can move on
+
+231
+00:11:24,660 --> 00:11:29,040
+to creating the content right here so
+
+232
+00:11:29,040 --> 00:11:32,070
+this is where I'm gonna I'm gonna first
+
+233
+00:11:32,070 --> 00:11:34,770
+show you how to do these two columns for
+
+234
+00:11:34,770 --> 00:11:37,140
+this content number 1 and then after
+
+235
+00:11:37,140 --> 00:11:38,880
+that I'll be showing you how to change
+
+236
+00:11:38,880 --> 00:11:41,190
+that so it actually expands so I so
+
+237
+00:11:41,190 --> 00:11:43,770
+actually spans two rows and then two
+
+238
+00:11:43,770 --> 00:11:47,070
+columns just like this one okay so back
+
+239
+00:11:47,070 --> 00:11:50,340
+inside here let's specify our two more
+
+240
+00:11:50,340 --> 00:11:52,800
+elements for each one of those content
+
+241
+00:11:52,800 --> 00:11:56,250
+areas so I can say right here a class of
+
+242
+00:11:56,250 --> 00:11:59,430
+content - large and we can say right
+
+243
+00:11:59,430 --> 00:12:03,060
+here content number one and make this a
+
+244
+00:12:03,060 --> 00:12:06,900
+and then make this B so with this right
+
+245
+00:12:06,900 --> 00:12:09,570
+here if I save this and refresh we can
+
+246
+00:12:09,570 --> 00:12:12,060
+see it is successfully flowed across to
+
+247
+00:12:12,060 --> 00:12:15,480
+the second row and the actual items
+
+248
+00:12:15,480 --> 00:12:18,110
+themselves are once again taking up a
+
+249
+00:12:18,110 --> 00:12:21,960
+single piece of area so single row in a
+
+250
+00:12:21,960 --> 00:12:24,750
+single column okay so now we're gonna
+
+251
+00:12:24,750 --> 00:12:27,300
+simply in a very similar way to the
+
+252
+00:12:27,300 --> 00:12:27,990
+header
+
+253
+00:12:27,990 --> 00:12:29,760
+we're gonna make these to span multiple
+
+254
+00:12:29,760 --> 00:12:32,700
+rows so you may have guessed we're going
+
+255
+00:12:32,700 --> 00:12:35,790
+to be using the grid row start and the
+
+256
+00:12:35,790 --> 00:12:39,270
+grid row ends to achieve that let's
+
+257
+00:12:39,270 --> 00:12:42,180
+target the content large class and make
+
+258
+00:12:42,180 --> 00:12:45,600
+this breed a row start we can make it
+
+259
+00:12:45,600 --> 00:12:48,660
+start of course at number two and a grid
+
+260
+00:12:48,660 --> 00:12:51,150
+the row ends and this time I'm going to
+
+261
+00:12:51,150 --> 00:12:56,430
+be using span - so basically span - is
+
+262
+00:12:56,430 --> 00:12:59,910
+an alternative to specifying an actual
+
+263
+00:12:59,910 --> 00:13:03,420
+grid line number and let's just save
+
+264
+00:13:03,420 --> 00:13:05,370
+this and refresh we can see we get this
+
+265
+00:13:05,370 --> 00:13:08,160
+result right here so of course the grid
+
+266
+00:13:08,160 --> 00:13:12,630
+row start was two so this second grid
+
+267
+00:13:12,630 --> 00:13:17,070
+line right here and we used span so when
+
+268
+00:13:17,070 --> 00:13:19,710
+I said span - it basically means we're
+
+269
+00:13:19,710 --> 00:13:21,000
+going to start here
+
+270
+00:13:21,000 --> 00:13:24,870
+then span two lines of course span we
+
+271
+00:13:24,870 --> 00:13:27,540
+have line number three right here and
+
+272
+00:13:27,540 --> 00:13:30,060
+then line that before just down here so
+
+273
+00:13:30,060 --> 00:13:32,820
+started two and then span two gives us
+
+274
+00:13:32,820 --> 00:13:34,830
+this result but here of course as an
+
+275
+00:13:34,830 --> 00:13:37,400
+alternative I could simply just say fall
+
+276
+00:13:37,400 --> 00:13:40,380
+instead of using the span to it works
+
+277
+00:13:40,380 --> 00:13:42,810
+the exact same way it saved this refresh
+
+278
+00:13:42,810 --> 00:13:44,930
+and of course we get no different so
+
+279
+00:13:44,930 --> 00:13:48,630
+I'll just set this back to being span
+
+280
+00:13:48,630 --> 00:13:52,590
+two so now if we want to make this so
+
+281
+00:13:52,590 --> 00:13:56,670
+this single content our spans also you
+
+282
+00:13:56,670 --> 00:13:59,070
+know this second column here just like
+
+283
+00:13:59,070 --> 00:13:59,970
+this one
+
+284
+00:13:59,970 --> 00:14:02,640
+this can be done quite easily I'm just
+
+285
+00:14:02,640 --> 00:14:05,340
+going to be removing this second content
+
+286
+00:14:05,340 --> 00:14:08,610
+item and making this simply content
+
+287
+00:14:08,610 --> 00:14:11,940
+number one so now we can go inside here
+
+288
+00:14:11,940 --> 00:14:15,390
+and we can also say grid column start
+
+289
+00:14:15,390 --> 00:14:19,830
+and make this one and then grids column
+
+290
+00:14:19,830 --> 00:14:22,200
+end and make this three so essentially
+
+291
+00:14:22,200 --> 00:14:24,900
+we're combining both the grid row and
+
+292
+00:14:24,900 --> 00:14:27,810
+the greedy column so now I'll save this
+
+293
+00:14:27,810 --> 00:14:30,330
+and refresh and we can see right here we
+
+294
+00:14:30,330 --> 00:14:33,780
+start at column number one and we finish
+
+295
+00:14:33,780 --> 00:14:37,950
+at column number three right here and of
+
+296
+00:14:37,950 --> 00:14:41,280
+course the row spanning is still in
+
+297
+00:14:41,280 --> 00:14:43,620
+effect so now we get this large box
+
+298
+00:14:43,620 --> 00:14:46,260
+spanning multiple rows and then multiple
+
+299
+00:14:46,260 --> 00:14:49,770
+columns so now moving on to the tiny
+
+300
+00:14:49,770 --> 00:14:51,990
+boxes on the right side here this is
+
+301
+00:14:51,990 --> 00:14:54,420
+going to be very straightforward we're
+
+302
+00:14:54,420 --> 00:14:56,760
+gonna simply create two more elements so
+
+303
+00:14:56,760 --> 00:15:00,330
+content small and also content small
+
+304
+00:15:00,330 --> 00:15:04,020
+adjust here and for this we can say
+
+305
+00:15:04,020 --> 00:15:06,150
+content number two and then content
+
+306
+00:15:06,150 --> 00:15:08,900
+number three save this and of course
+
+307
+00:15:08,900 --> 00:15:12,750
+these ones also flow naturally so
+
+308
+00:15:12,750 --> 00:15:14,970
+they're in the correct spot and that is
+
+309
+00:15:14,970 --> 00:15:18,570
+awfully small content items so for the
+
+310
+00:15:18,570 --> 00:15:20,490
+foot out it's gonna work in the same way
+
+311
+00:15:20,490 --> 00:15:22,320
+as they head out but I'm gonna be
+
+312
+00:15:22,320 --> 00:15:24,380
+showing you a different way to specify
+
+313
+00:15:24,380 --> 00:15:28,260
+your column spans so back inside here
+
+314
+00:15:28,260 --> 00:15:30,900
+let's create the element for the footer
+
+315
+00:15:30,900 --> 00:15:32,890
+so with their class of
+
+316
+00:15:32,890 --> 00:15:36,040
+just like this and this CSS rule says
+
+317
+00:15:36,040 --> 00:15:39,460
+four footer is gonna say greet - Poland
+
+318
+00:15:39,460 --> 00:15:41,860
+and we're gonna say one forward slash
+
+319
+00:15:41,860 --> 00:15:45,190
+and then spam to read so for this this
+
+320
+00:15:45,190 --> 00:15:48,930
+is basically just shorthand for saying
+
+321
+00:15:48,930 --> 00:15:54,790
+grid column starts at one and grid
+
+322
+00:15:54,790 --> 00:15:58,300
+column end at span three so basically
+
+323
+00:15:58,300 --> 00:16:01,060
+this right here is the equivalent to
+
+324
+00:16:01,060 --> 00:16:04,540
+this right here you separate your start
+
+325
+00:16:04,540 --> 00:16:07,480
+and your end with a forward slash
+
+326
+00:16:07,480 --> 00:16:10,690
+so now saving this and refreshing is
+
+327
+00:16:10,690 --> 00:16:12,600
+gonna give us this result right here
+
+328
+00:16:12,600 --> 00:16:15,310
+exactly what we want I might just go
+
+329
+00:16:15,310 --> 00:16:18,480
+back and make this actually save footer
+
+330
+00:16:18,480 --> 00:16:21,370
+so one last thing I want to show you is
+
+331
+00:16:21,370 --> 00:16:24,040
+going to be the combination of the grid
+
+332
+00:16:24,040 --> 00:16:26,500
+templates on the container in a very
+
+333
+00:16:26,500 --> 00:16:29,620
+similar way as we did right here so for
+
+334
+00:16:29,620 --> 00:16:33,130
+this we can simply say grid template and
+
+335
+00:16:33,130 --> 00:16:34,990
+we're going to firstly specify the row
+
+336
+00:16:34,990 --> 00:16:37,900
+so basically this guy right here then a
+
+337
+00:16:37,900 --> 00:16:40,000
+forward slash and then say repeats three
+
+338
+00:16:40,000 --> 00:16:42,760
+1fr just like this so now this right
+
+339
+00:16:42,760 --> 00:16:46,120
+here in a similar way to this one this
+
+340
+00:16:46,120 --> 00:16:48,670
+is the exact same as saying this right
+
+341
+00:16:48,670 --> 00:16:51,610
+here it is simply just a shorthand so
+
+342
+00:16:51,610 --> 00:16:53,710
+now getting rid of this is going to give
+
+343
+00:16:53,710 --> 00:16:56,620
+us the exact same result let's save this
+
+344
+00:16:56,620 --> 00:16:58,960
+and refresh and we can see about he of
+
+345
+00:16:58,960 --> 00:17:02,140
+course we get the same result and that's
+
+346
+00:17:02,140 --> 00:17:04,300
+how to create a basic layer from scratch
+
+347
+00:17:04,300 --> 00:17:07,089
+using CSS grid thanks for watching guys
+
+348
+00:17:07,089 --> 00:17:10,379
+and I'll see you later
+
